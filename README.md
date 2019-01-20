@@ -1,4 +1,5 @@
 # visualizebigo
+A project to visualize algorithms
 
 ## Project setup
 ```
