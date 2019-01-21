@@ -6,7 +6,7 @@
     <div id="random">
       <div class="sorting-options">
         <span class="option">
-          <label for="arraySize">Size :</label>
+          <label class="option" for="arraySize">Size :</label>
           <select id="arraySize" v-model.number="arraySize">
             <option>50</option>
             <option>40</option>
@@ -16,19 +16,19 @@
           </select>
         </span>
         <span class="option">
-          <label for="timerInterval">Timer interval (in millisec) :</label>
+          <label class="option" for="timerInterval">Timer interval (in millisec) :</label>
           <select id="timerInterval" v-model.number="timerInterval">
             <option>100</option>
             <option>500</option>
             <option>1000</option>
           </select>
         </span>
-        <button v-on:click="setRandomArray()">Generate Random Array</button>
+        <button class="option" v-on:click="setRandomArray()">Generate Random Array</button>
         <button v-on:click="sortArray()">Sort</button>
       </div>
       <div v-if="array.length > 0">
         <graph-bar
-            :width="array.length * 30"
+            :width="600"
             :height="400"
             :axis-min="0"
             :axis-max="array.length"
@@ -39,18 +39,25 @@
       </div>
       <!--<b-container class="bv-example-row">
           <b-row>
-              <b-col>1 of 3</b-col>
-              <b-col>2 of 3</b-col>
-              <b-col>3 of 3</b-col>
+              <b-col>1 of 6</b-col>
+              <b-col>2 of 6</b-col>
+              <b-col>3 of 6</b-col>
+            <b-col>4 of 6</b-col>
+            <b-col>5 of 6</b-col>
+            <b-col>6 of 6</b-col>
+            <b-col>7 of 6</b-col>
+            <b-col>8 of 6</b-col>
+            <b-col>9 of 6</b-col>
+            <b-col>10 of 6</b-col>
           </b-row>
       </b-container>
-      -->
+-->
       <b-container>
           <b-row>
               <b-col>
                 <div v-if="bubbleArray.length > 0">
                   <graph-bar
-                      :width="bubbleArray.length * 30"
+                      :width="600"
                       :height="400"
                       :axis-min="0"
                       :axis-max="bubbleArray.length"
@@ -63,7 +70,7 @@
               <b-col>
                 <div v-if="insertionArray.length > 0">
                   <graph-bar
-                      :width="insertionArray.length * 30"
+                      :width="600"
                       :height="400"
                       :axis-min="0"
                       :axis-max="insertionArray.length"
@@ -78,7 +85,7 @@
             <b-col>
               <div v-if="selectionArray.length > 0">
                 <graph-bar
-                    :width="selectionArray.length * 30"
+                    :width="600"
                     :height="400"
                     :axis-min="0"
                     :axis-max="selectionArray.length"
@@ -91,7 +98,7 @@
             <b-col>
               <div v-if="quickSortArray.length > 0">
                 <graph-bar
-                    :width="quickSortArray.length * 30"
+                    :width="600"
                     :height="400"
                     :axis-min="0"
                     :axis-max="quickSortArray.length"
@@ -302,7 +309,7 @@ export default {
 <style scoped>
 .section {
   float: right;
-  height: 100vh;
+  height: 2000px;
   padding-top: 60px;
   width: 100%;
 }
@@ -314,11 +321,10 @@ export default {
   text-transform: uppercase;
 }
 .sorting-options{
-  float: left;
   padding-top: 50px;
 }
 .option{
-  padding-right: 10px;
+  margin-right: 10px;
 }
 h3 {
   margin: 40px 0 0;
