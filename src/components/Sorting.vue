@@ -4,55 +4,61 @@
       SORTING
     </div>
     <div id="random">
-      <div class="sorting-options">
-        <span class="option">
-          <label class="option" for="arraySize">Size :</label>
-          <select id="arraySize" v-model.number="arraySize">
-            <option>50</option>
-            <option>40</option>
-            <option>30</option>
-            <option>20</option>
-            <option>10</option>
-          </select>
-        </span>
-        <span class="option">
-          <label class="option" for="timerInterval">Timer interval (in millisec) :</label>
-          <select id="timerInterval" v-model.number="timerInterval">
-            <option>100</option>
-            <option>500</option>
-            <option>1000</option>
-          </select>
-        </span>
-        <button class="option" v-on:click="setRandomArray()">Generate Random Array</button>
-        <button v-on:click="sortArray()">Sort</button>
-      </div>
-      <div v-if="array.length > 0">
-        <graph-bar
-            :width="600"
-            :height="400"
-            :axis-min="0"
-            :axis-max="array.length"
-            :labels="labels"
-            :values="array">
-          <note :text="'Random array'"></note>
-        </graph-bar>
-      </div>
-      <!--<b-container class="bv-example-row">
-          <b-row>
-              <b-col>1 of 6</b-col>
-              <b-col>2 of 6</b-col>
-              <b-col>3 of 6</b-col>
-            <b-col>4 of 6</b-col>
-            <b-col>5 of 6</b-col>
-            <b-col>6 of 6</b-col>
-            <b-col>7 of 6</b-col>
-            <b-col>8 of 6</b-col>
-            <b-col>9 of 6</b-col>
-            <b-col>10 of 6</b-col>
-          </b-row>
+      <b-container style="max-width: 1600px">
+        <b-row>
+          <b-col>
+            <b-container>
+              <b-row class="sorting-options">
+                <b-col>
+                  <span class="option">
+                    <label class="option" for="arraySize">Size :</label>
+                    <select id="arraySize" v-model.number="arraySize">
+                      <option>50</option>
+                      <option>40</option>
+                      <option>30</option>
+                      <option>20</option>
+                      <option>10</option>
+                    </select>
+                  </span>
+                </b-col>
+              </b-row>
+              <b-row>
+                <b-col>
+                  <span class="option">
+                    <label class="option" for="timerInterval">Timer interval (in millisec) :</label>
+                    <select id="timerInterval" v-model.number="timerInterval">
+                      <option>100</option>
+                      <option>500</option>
+                      <option>1000</option>
+                    </select>
+                  </span>
+                </b-col>
+              </b-row>
+              <b-row>
+                <b-col>
+                  <button class="option" v-on:click="setRandomArray()">Generate Random Array</button>
+                  <button v-on:click="sortArray()">Sort</button>
+                </b-col>
+              </b-row>
+            </b-container>
+          </b-col>
+          <b-col>
+            <div v-if="array.length > 0">
+              <graph-bar
+                  :width="600"
+                  :height="400"
+                  :axis-min="0"
+                  :axis-max="array.length"
+                  :labels="labels"
+                  :values="array">
+                <note :text="'Random array'"></note>
+              </graph-bar>
+            </div>
+          </b-col>
+        </b-row>
       </b-container>
--->
-      <b-container>
+
+      <b-container style="max-width: 1600px">
           <b-row>
               <b-col>
                 <div v-if="bubbleArray.length > 0">
@@ -309,7 +315,7 @@ export default {
 <style scoped>
 .section {
   float: right;
-  height: 2000px;
+  height: 1300px;
   padding-top: 60px;
   width: 100%;
 }

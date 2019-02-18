@@ -28,3 +28,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+TODO : upgrade sorting section css
+TODO : add tooltip explaining algorithms on chart
+TODO : add gif in concept section
+TODO : add new visualizations
